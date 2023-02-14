@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TodoListController {
   private final List<Todo> todolist = new ArrayList<>();
     @GetMapping("/api/todo")
-  public List<Todo> todolist(){
-      return todolist;
-  }
+  public List<Todo> todolist(){ return todolist;}
     @PostMapping("/api/todo")
   public void addList(String author, String message) {
       todolist.add(new Todo(author, message));
